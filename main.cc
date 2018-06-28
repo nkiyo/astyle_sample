@@ -20,7 +20,7 @@ private:
 void DummyClass::func(int x,
                       int y) {
     x += 2;
-    y   =   0 + y;
+    y = 0 + y;
     int z = x + y; /* てすと */
     return z; // てすと
 }

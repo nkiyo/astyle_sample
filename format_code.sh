@@ -1,6 +1,17 @@
 #!/bin/bash
 # C,C++のソースのフォーマットを整える
 
+# 飾りコメント削除
+## "/******" => "/**"
+sed -ri 's/\/\*+/\/\**/g' main.cc
+## "******/" => "*/"
+sed -ri 's/\*+\//\*\//g' main.cc
+
+# doxygenの不要属性削除
+sed -ri '/@author/d' main.cc
+sed -ri '/@date/d' main.cc
+#sed -ri '/@note/d' main.cc
+
 # astyleで連続するタブを削除する方法はなさそうだったのでsed使う
 sed -ri 's/\t+/ /g' main.cc
 

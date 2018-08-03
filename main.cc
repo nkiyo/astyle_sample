@@ -25,6 +25,11 @@ void DummyClass::func(int x,
     return z; // てすと
 }
 
+/************
+ * hoge
+ * @author nkiyo
+ * @date 2018-08-03
+ *************/
 int main() {
     DummyClass *dc = new DummyClass();
     dc->func(1, 1);
